@@ -106,8 +106,8 @@ void MeshRefinement::flag_elements_by_error_fraction (const ErrorVector & error_
       const dof_id_type id  = (*el_it)->id();
       libmesh_assert_less (id, error_per_cell.size());
 
-      error_max = std::max (error_max, error_per_cell[id]);
-      error_min = std::min (error_min, error_per_cell[id]);
+      error_max = std::max (error_max, (double)error_per_cell[id]);
+      error_min = std::min (error_min, (double)error_per_cell[id]);
     }
   this->comm().max(error_max);
   this->comm().min(error_min);

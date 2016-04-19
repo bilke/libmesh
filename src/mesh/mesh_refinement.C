@@ -325,9 +325,9 @@ void MeshRefinement::create_parent_error_vector(const ErrorVector & error_per_ce
         error_per_parent[i] = std::sqrt(error_per_parent[i]);
 
       parent_error_min = std::min (parent_error_min,
-                                   error_per_parent[i]);
+                                   (double)error_per_parent[i]);
       parent_error_max = std::max (parent_error_max,
-                                   error_per_parent[i]);
+                                   (double)error_per_parent[i]);
     }
 }
 
