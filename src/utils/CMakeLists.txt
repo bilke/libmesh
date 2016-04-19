@@ -1,0 +1,22 @@
+add_library(utils
+	error_vector.C
+	hashword.C
+	libmesh_version.C
+	location_maps.C
+	number_lookups.C
+	perf_log.C
+	plt_loader.C
+	plt_loader_read.C
+	plt_loader_write.C
+	point_locator_base.C
+	point_locator_list.C
+	point_locator_tree.C
+	statistics.C
+	string_to_enum.C
+	timestamp.C
+	topology_map.C
+	tree.C
+	tree_node.C
+	utility.C
+	xdr_cxx.C
+)

@@ -1,0 +1,22 @@
+add_library(reduced_basis
+	rb_assembly_expansion.C
+	rb_construction.C
+	rb_construction_base.C
+	rb_data_deserialization.C
+	rb_data_serialization.C
+	rb_eim_assembly.C
+	rb_eim_construction.C
+	rb_eim_evaluation.C
+	rb_eim_theta.C
+	rb_evaluation.C
+	rb_parameters.C
+	rb_parametrized.C
+	rb_scm_construction.C
+	rb_scm_evaluation.C
+	rb_temporal_discretization.C
+	rb_theta_expansion.C
+	transient_rb_assembly_expansion.C
+	transient_rb_construction.C
+	transient_rb_evaluation.C
+	transient_rb_theta_expansion.C
+)

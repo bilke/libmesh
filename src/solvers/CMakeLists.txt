@@ -1,0 +1,33 @@
+add_library(solvers
+	adaptive_time_solver.C
+	diff_solver.C
+	eigen_solver.C
+	eigen_sparse_linear_solver.C
+	eigen_time_solver.C
+	euler2_solver.C
+	euler_solver.C
+	laspack_linear_solver.C
+	linear_solver.C
+	memory_solution_history.C
+	newmark_solver.C
+	newton_solver.C
+	nlopt_optimization_solver.C
+	no_solution_history.C
+	nonlinear_solver.C
+	optimization_solver.C
+	petsc_auto_fieldsplit.C
+	petsc_diff_solver.C
+	petsc_linear_solver.C
+	petsc_nonlinear_solver.C
+	petscdmlibmesh.C
+	petscdmlibmeshimpl.C
+	second_order_unsteady_solver.C
+	slepc_eigen_solver.C
+	steady_solver.C
+	tao_optimization_solver.C
+	time_solver.C
+	trilinos_aztec_linear_solver.C
+	trilinos_nox_nonlinear_solver.C
+	twostep_time_solver.C
+	unsteady_solver.C
+)

@@ -1,0 +1,16 @@
+add_library(base
+	dof_map.C
+	dof_map_constraints.C
+	dof_object.C
+	libmesh.C
+	libmesh_common.C
+	libmesh_isnan.c
+	libmesh_singleton.C
+	periodic_boundaries.C
+	periodic_boundary.C
+	periodic_boundary_base.C
+	print_trace.C
+	reference_counted_object.C
+	reference_counter.C
+	sparsity_pattern.C
+)

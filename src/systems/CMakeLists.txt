@@ -1,0 +1,28 @@
+add_library(systems
+	condensed_eigen_system.C
+	continuation_system.C
+	dg_fem_context.C
+	diff_context.C
+	diff_system.C
+	eigen_system.C
+	equation_systems.C
+	equation_systems_io.C
+	explicit_system.C
+	fem_context.C
+	fem_system.C
+	frequency_system.C
+	implicit_system.C
+	linear_implicit_system.C
+	newmark_system.C
+	nonlinear_implicit_system.C
+	optimization_system.C
+	parameter_vector.C
+	qoi_set.C
+	steady_system.C
+	system.C
+	system_io.C
+	system_projection.C
+	system_subset.C
+	system_subset_by_subdomain.C
+	transient_system.C
+)

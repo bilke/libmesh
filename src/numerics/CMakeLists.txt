@@ -1,0 +1,33 @@
+add_library(numerics
+	analytic_function.C
+	coupling_matrix.C
+	dense_matrix.C
+	dense_matrix_base.C
+	dense_matrix_blas_lapack.C
+	dense_submatrix.C
+	dense_subvector.C
+	dense_vector.C
+	dense_vector_base.C
+	distributed_vector.C
+	eigen_preconditioner.C
+	eigen_sparse_matrix.C
+	eigen_sparse_vector.C
+	function_base.C
+	laspack_matrix.C
+	laspack_vector.C
+	numeric_vector.C
+	petsc_matrix.C
+	petsc_preconditioner.C
+	petsc_vector.C
+	preconditioner.C
+	sparse_matrix.C
+	sparse_shell_matrix.C
+	sum_shell_matrix.C
+	tensor_shell_matrix.C
+	tensor_tools.C
+	trilinos_epetra_matrix.C
+	trilinos_epetra_vector.C
+	trilinos_preconditioner.C
+	type_tensor.C
+	type_vector.C
+)

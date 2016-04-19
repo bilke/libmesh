@@ -1,0 +1,9 @@
+add_library(partitioning
+	centroid_partitioner.C
+	linear_partitioner.C
+	metis_partitioner.C
+	parmetis_partitioner.C
+	partitioner.C
+	partitioner_factory.C
+	sfc_partitioner.C
+)

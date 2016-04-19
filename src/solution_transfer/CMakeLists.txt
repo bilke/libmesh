@@ -1,0 +1,11 @@
+add_library(solution_transfer
+	direct_solution_transfer.C
+	dtk_adapter.C
+	dtk_evaluator.C
+	dtk_solution_transfer.C
+	meshfree_interpolation.C
+	meshfree_solution_transfer.C
+	meshfunction_solution_transfer.C
+	radial_basis_interpolation.C
+	solution_transfer.C
+)

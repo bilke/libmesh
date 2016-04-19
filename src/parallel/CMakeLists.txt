@@ -1,0 +1,9 @@
+add_library(parallel
+	parallel_bin_sorter.C
+	parallel_elem.C
+	parallel_ghost_sync.C
+	parallel_histogram.C
+	parallel_node.C
+	parallel_sort.C
+	threads.C
+)

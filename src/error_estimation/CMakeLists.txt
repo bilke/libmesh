@@ -1,0 +1,17 @@
+add_library(error_estimation
+	adjoint_refinement_estimator.C
+	adjoint_residual_error_estimator.C
+	discontinuity_measure.C
+	error_estimator.C
+	exact_error_estimator.C
+	exact_solution.C
+	fourth_error_estimators.C
+	hp_coarsentest.C
+	hp_selector.C
+	hp_singular.C
+	jump_error_estimator.C
+	kelly_error_estimator.C
+	patch_recovery_error_estimator.C
+	uniform_refinement_estimator.C
+	weighted_patch_recovery_estimator.C
+)
