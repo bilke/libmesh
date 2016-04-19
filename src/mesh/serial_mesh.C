@@ -127,7 +127,9 @@ SerialMesh::SerialMesh (const Parallel::Communicator & comm_in,
   // here in the constructor.
   _next_unique_id = 0;
 #endif
+#if LIBMESH_HAVE_METIS
   _partitioner = UniquePtr<Partitioner>(new MetisPartitioner());
+#endif
 }
 
 
@@ -141,7 +143,9 @@ SerialMesh::SerialMesh (unsigned char d) :
   // here in the constructor.
   _next_unique_id = 0;
 #endif
+#if LIBMESH_HAVE_METIS
   _partitioner = UniquePtr<Partitioner>(new MetisPartitioner());
+#endif
 }
 #endif
 

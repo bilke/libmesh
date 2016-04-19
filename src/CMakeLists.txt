@@ -62,15 +62,6 @@ SET(SOURCES
 	mesh/xdr_soln.C
 )
 
-include_directories(
-	${CMAKE_SOURCE_DIR}/include
-	${CMAKE_SOURCE_DIR}/contrib/eigen/eigen
-)
-
-if(NOT MSVC)
-	add_definitions ("-Wno-c++11-extensions")
-endif()
-
 add_subdirectory(base)
 add_subdirectory(error_estimation)
 add_subdirectory(fe)
@@ -87,3 +78,5 @@ add_subdirectory(systems)
 add_subdirectory(utils)
 
 add_library(libmesh ${SOURCES})
+target_link_libraries(libmesh
+	base error_estimation fe geom numerics parallel partitioning physics quadrature reduced_basis solution_transfer solvers systems utils)

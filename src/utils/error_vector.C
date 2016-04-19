@@ -285,16 +285,21 @@ void ErrorVector::plot_error(const std::string & filename,
       mesh.renumber_nodes_and_elements();
     }
 
+
   if (filename.rfind(".gmv") < filename.size())
     {
+#ifdef LIBMESH_HAVE_GMV
       GMVIO(mesh).write_discontinuous_gmv(filename,
                                           temp_es, false);
+#endif
     }
+#ifdef LIBMESH_HAVE_TECPLOT_API
   else if (filename.rfind(".plt") < filename.size())
     {
       TecplotIO (mesh).write_equation_systems
         (filename, temp_es);
     }
+#endif
 #ifdef LIBMESH_HAVE_EXODUS_API
   else if( (filename.rfind(".exo") < filename.size()) ||
            (filename.rfind(".e") < filename.size()) )

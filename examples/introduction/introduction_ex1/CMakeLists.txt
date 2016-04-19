@@ -1,0 +1,2 @@
+add_executable(introduction_ex1 introduction_ex1.C)
+target_link_libraries(introduction_ex1 libmesh)

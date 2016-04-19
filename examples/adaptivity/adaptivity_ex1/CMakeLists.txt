@@ -1,0 +1,2 @@
+add_executable(adaptivity_ex1 adaptivity_ex1.C)
+target_link_libraries(adaptivity_ex1 libmesh)

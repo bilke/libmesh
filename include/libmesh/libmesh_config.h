@@ -528,7 +528,7 @@
 
 /* Flag indicating whether the library will be compiled with Exodus support */
 #ifndef LIBMESH_HAVE_EXODUS_API
-#define LIBMESH_HAVE_EXODUS_API 1
+#undef LIBMESH_HAVE_EXODUS_API // Bilke was 1
 #endif
 
 /* define if the compiler supports __gnu_cxx::hash */
@@ -655,12 +655,12 @@
 
 /* Flag indicating whether the library will be compiled with Metis support */
 #ifndef LIBMESH_HAVE_METIS
-#define LIBMESH_HAVE_METIS 1
+#undef LIBMESH_HAVE_METIS // Bilke was 1
 #endif
 
 /* Flag indicating whether or not MPI is available */
 #ifndef LIBMESH_HAVE_MPI
-#define LIBMESH_HAVE_MPI 1
+#undef LIBMESH_HAVE_MPI // Bilke was 1
 #endif
 
 /* define if the compiler implements namespaces */
@@ -677,7 +677,7 @@
 /* Flag indicating whether the library will be compiled with Nemesis support
    */
 #ifndef LIBMESH_HAVE_NEMESIS_API
-#define LIBMESH_HAVE_NEMESIS_API 1
+#undef LIBMESH_HAVE_NEMESIS_API // Bilke was 1
 #endif
 
 /* Flag indicating whether the library will be compiled with Netcdf support */
@@ -694,7 +694,7 @@
 /* Flag indicating whether the library will be compiled with Parmetis support
    */
 #ifndef LIBMESH_HAVE_PARMETIS
-#define LIBMESH_HAVE_PARMETIS 1
+#undef LIBMESH_HAVE_PARMETIS // Bilke was 1
 #endif
 
 /* Flag indicating whether or not PETSc is available */
@@ -821,7 +821,7 @@
 /* Flag indicating whether the library shall be compiled to use the Tecplot
    interface */
 #ifndef LIBMESH_HAVE_TECPLOT_API
-#define LIBMESH_HAVE_TECPLOT_API 1
+#undef LIBMESH_HAVE_TECPLOT_API // Bilke was 1
 #endif
 
 /* Flag indicating tecplot API understands newer features */

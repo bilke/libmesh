@@ -149,9 +149,11 @@ void NameBasedIO::read (const std::string & name)
           mymesh.allow_renumbering(false);
 #endif
         }
+#if LIBMESH_HAVE_NEMESIS_API
       else if (name.rfind(".nem") < name.size() ||
                name.rfind(".n")   < name.size())
         Nemesis_IO(mymesh).read (name);
+#endif
       else if (name.rfind(".cp") < name.size())
         {
           if(name.rfind(".cpa") < name.size())
@@ -227,16 +229,17 @@ void NameBasedIO::read (const std::string & name)
                    (new_name.rfind(".ele")   < new_name.size()))
             TetGenIO(mymesh).read (new_name);
 
+#if LIBMESH_HAVE_EXODUS_API
           else if (new_name.rfind(".exd") < new_name.size() ||
                    new_name.rfind(".e") < new_name.size())
             ExodusII_IO(mymesh).read (new_name);
-
+#endif
           else if (new_name.rfind(".msh") < new_name.size())
             GmshIO(mymesh).read (new_name);
-
+#if LIBMESH_HAVE_GMV
           else if (new_name.rfind(".gmv") < new_name.size())
             GMVIO(mymesh).read (new_name);
-
+#endif
           else if (new_name.rfind(".vtu") < new_name.size())
             VTKIO(mymesh).read(new_name);
 
@@ -301,9 +304,11 @@ void NameBasedIO::write (const std::string & name)
       else if (name.rfind(".xdr") < name.size())
         XdrIO(mymesh,true).write(name);
 
+#if LIBMESH_HAVE_NEMESIS_API
       else if (name.rfind(".nem") < name.size() ||
                name.rfind(".n")   < name.size())
         Nemesis_IO(mymesh).write(name);
+#endif
     }
 
   // serial file formats
@@ -333,14 +338,19 @@ void NameBasedIO::write (const std::string & name)
       {
         // Write the file based on extension
         if (new_name.rfind(".dat") < new_name.size())
+#if LIBMESH_HAVE_TECPLOT_API
           TecplotIO(mymesh).write (new_name);
 
         else if (new_name.rfind(".plt") < new_name.size())
           TecplotIO(mymesh,true).write (new_name);
+#else
+          ;
+#endif
 
         else if (new_name.rfind(".ucd") < new_name.size())
           UCDIO (mymesh).write (new_name);
 
+#if LIBMESH_HAVE_GMV
         else if (new_name.rfind(".gmv") < new_name.size())
           if (mymesh.n_partitions() > 1)
             GMVIO(mymesh).write (new_name);
@@ -350,11 +360,14 @@ void NameBasedIO::write (const std::string & name)
               io.partitioning() = false;
               io.write (new_name);
             }
+#endif
 
         else if (new_name.rfind(".ugrid") < new_name.size())
           DivaIO(mymesh).write(new_name);
+#if LIBMESH_HAVE_EXODUS_API
         else if (new_name.rfind(".e") < new_name.size())
           ExodusII_IO(mymesh).write(new_name);
+#endif
         else if (new_name.rfind(".mgf")  < new_name.size())
           LegacyXdrIO(mymesh,true).write_mgf(new_name);
 
@@ -446,11 +459,18 @@ void NameBasedIO::write_nodal_data (const std::string & name,
 
   // Write the file based on extension
   if (name.rfind(".dat") < name.size())
+#if LIBMESH_HAVE_TECPLOT_API
     TecplotIO(mymesh).write_nodal_data (name, v, vn);
+#else
+    ;
+#endif
 
+#if LIBMESH_HAVE_EXODUS_API
   else if (name.rfind(".e") < name.size())
     ExodusII_IO(mymesh).write_nodal_data(name, v, vn);
+#endif
 
+#if LIBMESH_HAVE_GMV
   else if (name.rfind(".gmv") < name.size())
     {
       if (mymesh.n_subdomains() > 1)
@@ -462,6 +482,7 @@ void NameBasedIO::write_nodal_data (const std::string & name,
           io.write_nodal_data (name, v, vn);
         }
     }
+#endif
 
   else if (name.rfind(".mesh") < name.size())
     MEDITIO(mymesh).write_nodal_data (name, v, vn);
@@ -469,12 +490,16 @@ void NameBasedIO::write_nodal_data (const std::string & name,
   else if (name.rfind(".msh") < name.size())
     GmshIO(mymesh).write_nodal_data (name, v, vn);
 
+#if LIBMESH_HAVE_NEMESIS_API
   else if (name.rfind(".nem") < name.size() ||
            name.rfind(".n")   < name.size())
     Nemesis_IO(mymesh).write_nodal_data(name, v, vn);
+#endif
 
+#if LIBMESH_HAVE_TECPLOT_API
   else if (name.rfind(".plt") < name.size())
     TecplotIO(mymesh,true).write_nodal_data (name, v, vn);
+#endif
 
   else if (name.rfind(".pvtu") < name.size())
     VTKIO(mymesh).write_nodal_data (name, v, vn);
