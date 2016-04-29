@@ -261,18 +261,18 @@
 
 /* command to invoke gdb */
 #ifndef LIBMESH_GDB_COMMAND
-#define LIBMESH_GDB_COMMAND "gdb"
+//#define LIBMESH_GDB_COMMAND "gdb"
 #endif
 
 /* define if the Boost library is available */
 #ifndef LIBMESH_HAVE_BOOST
-#define LIBMESH_HAVE_BOOST /**/
+//#define LIBMESH_HAVE_BOOST /**/
 #endif
 
 /* Flag indicating bzip2/bunzip2 are available for handling compressed .bz2
    files */
 #ifndef LIBMESH_HAVE_BZIP
-#define LIBMESH_HAVE_BZIP 1
+//#define LIBMESH_HAVE_BZIP 1
 #endif
 
 /* Flag indicating whether the library will be compiled with CAPNPROTO support
@@ -281,7 +281,7 @@
 
 /* Define to 1 if you have the <csignal> header file. */
 #ifndef LIBMESH_HAVE_CSIGNAL
-#define LIBMESH_HAVE_CSIGNAL 1
+//#define LIBMESH_HAVE_CSIGNAL 1
 #endif
 
 /* Flag indicating whether the library will be compiled with CURL support */
@@ -289,12 +289,12 @@
 
 /* define if the compiler supports basic C++11 syntax */
 #ifndef LIBMESH_HAVE_CXX11
-#define LIBMESH_HAVE_CXX11 1
+////#define LIBMESH_HAVE_CXX11 1
 #endif
 
 /* Flag indicating whether compiler supports alias declarations */
 #ifndef LIBMESH_HAVE_CXX11_ALIAS_DECLARATIONS
-#define LIBMESH_HAVE_CXX11_ALIAS_DECLARATIONS 1
+////#define LIBMESH_HAVE_CXX11_ALIAS_DECLARATIONS 1
 #endif
 
 /* Compiler supports alias declarations, but they are disabled in libmesh */
@@ -302,7 +302,7 @@
 
 /* Flag indicating whether compiler supports the auto keyword */
 #ifndef LIBMESH_HAVE_CXX11_AUTO
-#define LIBMESH_HAVE_CXX11_AUTO 1
+////#define LIBMESH_HAVE_CXX11_AUTO 1
 #endif
 
 /* Compiler supports auto keyword, but it is disabled in libmesh */
@@ -310,7 +310,7 @@
 
 /* Flag indicating whether compiler supports constexpr */
 #ifndef LIBMESH_HAVE_CXX11_CONSTEXPR
-#define LIBMESH_HAVE_CXX11_CONSTEXPR 1
+////#define LIBMESH_HAVE_CXX11_CONSTEXPR 1
 #endif
 
 /* Compiler supports constexper, but it is disabled in libmesh */
@@ -318,7 +318,7 @@
 
 /* Flag indicating whether compiler supports decltype */
 #ifndef LIBMESH_HAVE_CXX11_DECLTYPE
-#define LIBMESH_HAVE_CXX11_DECLTYPE 1
+////#define LIBMESH_HAVE_CXX11_DECLTYPE 1
 #endif
 
 /* Compiler supports decltype, but it is disabled in libmesh */
@@ -326,7 +326,7 @@
 
 /* Flag indicating whether compiler supports f() = delete; */
 #ifndef LIBMESH_HAVE_CXX11_DELETED_FUNCTIONS
-#define LIBMESH_HAVE_CXX11_DELETED_FUNCTIONS 1
+////#define LIBMESH_HAVE_CXX11_DELETED_FUNCTIONS 1
 #endif
 
 /* Compiler supports deleted functions, but they are disabled in libmesh */
@@ -334,7 +334,7 @@
 
 /* Flag indicating whether compiler supports f() final; */
 #ifndef LIBMESH_HAVE_CXX11_FINAL
-#define LIBMESH_HAVE_CXX11_FINAL 1
+////#define LIBMESH_HAVE_CXX11_FINAL 1
 #endif
 
 /* Compiler supports final keyword, but it is disabled in libmesh */
@@ -342,7 +342,7 @@
 
 /* Flag indicating whether compiler supports initializer lists */
 #ifndef LIBMESH_HAVE_CXX11_INITIALIZER_LIST
-#define LIBMESH_HAVE_CXX11_INITIALIZER_LIST 1
+////#define LIBMESH_HAVE_CXX11_INITIALIZER_LIST 1
 #endif
 
 /* Compiler supports initializer lists, but it is disabled in libmesh */
@@ -350,7 +350,7 @@
 
 /* Flag indicating whether compiler supports std::acosh */
 #ifndef LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_COSINE
-#define LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_COSINE 1
+////#define LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_COSINE 1
 #endif
 
 /* Compiler supports std::acosh, but it is disabled in libmesh */
@@ -358,7 +358,7 @@
 
 /* Flag indicating whether compiler supports std::acosh(complex) */
 #ifndef LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_COSINE_COMPLEX
-#define LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_COSINE_COMPLEX 1
+////#define LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_COSINE_COMPLEX 1
 #endif
 
 /* Compiler supports std::acosh(complex), but it is disabled in libmesh */
@@ -366,7 +366,7 @@
 
 /* Flag indicating whether compiler supports std::asinh */
 #ifndef LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_SINE
-#define LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_SINE 1
+////#define LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_SINE 1
 #endif
 
 /* Compiler supports std::asinh, but it is disabled in libmesh */
@@ -374,15 +374,15 @@
 
 /* Flag indicating whether compiler supports std::asinh(complex) */
 #ifndef LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_SINE_COMPLEX
-#define LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_SINE_COMPLEX 1
+////#define LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_SINE_COMPLEX 1
 #endif
 
 /* Compiler supports std::asinh(complex), but it is disabled in libmesh */
-/* #undef HAVE_CXX11_INVERSE_HYPERBOLIC_SINE_COMPLEX_BUT_DISABLED */
+/* #undef HAVE_CXX11_IN//VERSE_HYPERBOLIC_SINE_COMPLEX_BUT_DISABLED */
 
 /* Flag indicating whether compiler supports std::atanh */
 #ifndef LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_TANGENT
-#define LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_TANGENT 1
+//#define LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_TANGENT 1
 #endif
 
 /* Compiler supports std::atanh, but it is disabled in libmesh */
@@ -390,7 +390,7 @@
 
 /* Flag indicating whether compiler supports std::atanh(complex) */
 #ifndef LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_TANGENT_COMPLEX
-#define LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_TANGENT_COMPLEX 1
+//#define LIBMESH_HAVE_CXX11_INVERSE_HYPERBOLIC_TANGENT_COMPLEX 1
 #endif
 
 /* Compiler supports std::atanh(complex), but it is disabled in libmesh */
@@ -398,7 +398,7 @@
 
 /* Flag indicating whether compiler supports lambdas */
 #ifndef LIBMESH_HAVE_CXX11_LAMBDA
-#define LIBMESH_HAVE_CXX11_LAMBDA 1
+//#define LIBMESH_HAVE_CXX11_LAMBDA 1
 #endif
 
 /* Compiler supports lambdas, but they are disabled in libmesh */
@@ -406,7 +406,7 @@
 
 /* Flag indicating whether compiler supports std::move */
 #ifndef LIBMESH_HAVE_CXX11_MOVE
-#define LIBMESH_HAVE_CXX11_MOVE 1
+//#define LIBMESH_HAVE_CXX11_MOVE 1
 #endif
 
 /* Compiler supports std::move, but it is disabled in libmesh */
@@ -414,7 +414,7 @@
 
 /* Flag indicating whether compiler supports nullptr */
 #ifndef LIBMESH_HAVE_CXX11_NULLPTR
-#define LIBMESH_HAVE_CXX11_NULLPTR 1
+//#define LIBMESH_HAVE_CXX11_NULLPTR 1
 #endif
 
 /* Compiler supports nullptr, but it is disabled in libmesh */
@@ -425,7 +425,7 @@
 
 /* Flag indicating whether compiler supports the override keyword */
 #ifndef LIBMESH_HAVE_CXX11_OVERRIDE
-#define LIBMESH_HAVE_CXX11_OVERRIDE 1
+//#define LIBMESH_HAVE_CXX11_OVERRIDE 1
 #endif
 
 /* Compiler supports the override keyword, but it is disabled in libmesh */
@@ -433,7 +433,7 @@
 
 /* Flag indicating whether compiler supports range-based for loops */
 #ifndef LIBMESH_HAVE_CXX11_RANGEFOR
-#define LIBMESH_HAVE_CXX11_RANGEFOR 1
+//#define LIBMESH_HAVE_CXX11_RANGEFOR 1
 #endif
 
 /* Compiler supports range-based for loops, but it is disabled in libmesh */
@@ -441,7 +441,7 @@
 
 /* Flag indicating whether compiler supports std::regex */
 #ifndef LIBMESH_HAVE_CXX11_REGEX
-#define LIBMESH_HAVE_CXX11_REGEX 1
+//#define LIBMESH_HAVE_CXX11_REGEX 1
 #endif
 
 /* Compiler supports std::regex, but it is disabled in libmesh */
@@ -449,7 +449,7 @@
 
 /* Flag indicating whether compiler supports rvalue references */
 #ifndef LIBMESH_HAVE_CXX11_RVALUE_REFERENCES
-#define LIBMESH_HAVE_CXX11_RVALUE_REFERENCES 1
+//#define LIBMESH_HAVE_CXX11_RVALUE_REFERENCES 1
 #endif
 
 /* Compiler supports rvalue references, but they are disabled in libmesh */
@@ -457,7 +457,7 @@
 
 /* Flag indicating whether compiler supports std::shared_ptr */
 #ifndef LIBMESH_HAVE_CXX11_SHARED_PTR
-#define LIBMESH_HAVE_CXX11_SHARED_PTR 1
+//#define LIBMESH_HAVE_CXX11_SHARED_PTR 1
 #endif
 
 /* Compiler supports std::shared_ptr, but it is disabled in libmesh */
@@ -471,7 +471,7 @@
 
 /* Flag indicating whether compiler supports std::to_string() */
 #ifndef LIBMESH_HAVE_CXX11_TO_STRING
-#define LIBMESH_HAVE_CXX11_TO_STRING 1
+//#define LIBMESH_HAVE_CXX11_TO_STRING 1
 #endif
 
 /* Compiler supports std::to_string(), but it is disabled in libmesh */
@@ -479,7 +479,7 @@
 
 /* Flag indicating whether compiler supports <type_traits> */
 #ifndef LIBMESH_HAVE_CXX11_TYPE_TRAITS
-#define LIBMESH_HAVE_CXX11_TYPE_TRAITS 1
+//#define LIBMESH_HAVE_CXX11_TYPE_TRAITS 1
 #endif
 
 /* Compiler supports <type_traits>, but it is disabled in libmesh */
@@ -487,7 +487,7 @@
 
 /* Flag indicating whether compiler supports std::unique_ptr */
 #ifndef LIBMESH_HAVE_CXX11_UNIQUE_PTR
-#define LIBMESH_HAVE_CXX11_UNIQUE_PTR 1
+////#define LIBMESH_HAVE_CXX11_UNIQUE_PTR 1
 #endif
 
 /* Compiler supports std::unique_ptr, but it is disabled in libmesh */
@@ -495,7 +495,7 @@
 
 /* Flag indicating whether compiler supports variadic templates */
 #ifndef LIBMESH_HAVE_CXX11_VARIADIC_TEMPLATES
-#define LIBMESH_HAVE_CXX11_VARIADIC_TEMPLATES 1
+//#define LIBMESH_HAVE_CXX11_VARIADIC_TEMPLATES 1
 #endif
 
 /* Compiler supports variadic templates, but it is disabled in libmesh */
@@ -518,7 +518,7 @@
 
 /* Define to 1 if you have the <Eigen/Dense> header file. */
 #ifndef LIBMESH_HAVE_EIGEN_DENSE
-#define LIBMESH_HAVE_EIGEN_DENSE 1
+//#define LIBMESH_HAVE_EIGEN_DENSE 1
 #endif
 
 /* Define to 1 if you have the <Eigen/Sparse> header file. */
@@ -528,7 +528,7 @@
 
 /* Flag indicating whether the library will be compiled with Exodus support */
 #ifndef LIBMESH_HAVE_EXODUS_API
-#undef LIBMESH_HAVE_EXODUS_API // Bilke was 1
+//#undef LIBMESH_HAVE_EXODUS_API // Bilke was 1
 #endif
 
 /* define if the compiler supports __gnu_cxx::hash */
@@ -554,44 +554,44 @@
 
 /* Define to 1 if you have the <fenv.h> header file. */
 #ifndef LIBMESH_HAVE_FENV_H
-#define LIBMESH_HAVE_FENV_H 1
+//#define LIBMESH_HAVE_FENV_H 1
 #endif
 
 /* Flag indicating whether the library will be compiled with FPARSER support
    */
 #ifndef LIBMESH_HAVE_FPARSER
-#define LIBMESH_HAVE_FPARSER 1
+//#define LIBMESH_HAVE_FPARSER 1
 #endif
 
 /* Flag indicating whether FPARSER will build the full development version */
 #ifndef LIBMESH_HAVE_FPARSER_DEVEL
-#define LIBMESH_HAVE_FPARSER_DEVEL 0
+//#define LIBMESH_HAVE_FPARSER_DEVEL 0
 #endif
 
 /* Flag indicating whether FPARSER will be built with JIT compilation enabled
    */
 #ifndef LIBMESH_HAVE_FPARSER_JIT
-#define LIBMESH_HAVE_FPARSER_JIT 1
+//#define LIBMESH_HAVE_FPARSER_JIT 1
 #endif
 
 /* define if the compiler supports GCC C++ ABI name demangling */
 #ifndef LIBMESH_HAVE_GCC_ABI_DEMANGLE
-#define LIBMESH_HAVE_GCC_ABI_DEMANGLE 1
+//#define LIBMESH_HAVE_GCC_ABI_DEMANGLE 1
 #endif
 
 /* Define to 1 if you have the <getopt.h> header file. */
 #ifndef LIBMESH_HAVE_GETOPT_H
-#define LIBMESH_HAVE_GETOPT_H 1
+//#define LIBMESH_HAVE_GETOPT_H 1
 #endif
 
 /* Flag indicating if the library should be built with calls to getpwuid() */
 #ifndef LIBMESH_HAVE_GETPWUID
-#define LIBMESH_HAVE_GETPWUID 1
+//#define LIBMESH_HAVE_GETPWUID 1
 #endif
 
 /* define if the compiler supports glibc backtrace */
 #ifndef LIBMESH_HAVE_GLIBC_BACKTRACE
-#define LIBMESH_HAVE_GLIBC_BACKTRACE 1
+//#define LIBMESH_HAVE_GLIBC_BACKTRACE 1
 #endif
 
 /* Flag indicating whether the library will be compiled with GLPK support */
@@ -625,7 +625,7 @@
 /* Flag indicating whether the library will be compiled with Howard Hinnant's
    C++03 unique_ptr implementation */
 #ifndef LIBMESH_HAVE_HINNANT_UNIQUE_PTR
-#define LIBMESH_HAVE_HINNANT_UNIQUE_PTR 1
+//#define LIBMESH_HAVE_HINNANT_UNIQUE_PTR 1
 #endif
 
 /* Define to 1 if you have the <inttypes.h> header file. */
@@ -709,22 +709,22 @@
 
 /* Define if you have POSIX threads libraries and header files. */
 #ifndef LIBMESH_HAVE_PTHREAD
-#define LIBMESH_HAVE_PTHREAD 1
+//#define LIBMESH_HAVE_PTHREAD 1
 #endif
 
 /* Have PTHREAD_PRIO_INHERIT. */
 #ifndef LIBMESH_HAVE_PTHREAD_PRIO_INHERIT
-#define LIBMESH_HAVE_PTHREAD_PRIO_INHERIT 1
+//#define LIBMESH_HAVE_PTHREAD_PRIO_INHERIT 1
 #endif
 
 /* Flag indicating whether the library will be compiled with Qhull support */
 #ifndef LIBMESH_HAVE_QHULL_API
-#define LIBMESH_HAVE_QHULL_API 1
+//#define LIBMESH_HAVE_QHULL_API 1
 #endif
 
 /* Define to 1 if you have the <rpc/rpc.h> header file. */
 #ifndef LIBMESH_HAVE_RPC_RPC_H
-#define LIBMESH_HAVE_RPC_RPC_H 1
+//#define LIBMESH_HAVE_RPC_RPC_H 1
 #endif
 
 /* Define to 1 if you have the <rpc/xdr.h> header file. */
@@ -732,7 +732,7 @@
 
 /* define if the compiler supports Run-Time Type Identification */
 #ifndef LIBMESH_HAVE_RTTI
-#define LIBMESH_HAVE_RTTI /**/
+//#define LIBMESH_HAVE_RTTI /**/
 #endif
 
 /* Flag indicating whether the library will be compiled with SFC support */
@@ -865,22 +865,22 @@
 
 /* Flag indicating headers and libraries for XDR IO are available */
 #ifndef LIBMESH_HAVE_XDR
-#define LIBMESH_HAVE_XDR 1
+//#define LIBMESH_HAVE_XDR 1
 #endif
 
 /* Define to 1 if you have the <xmmintrin.h> header file. */
 #ifndef LIBMESH_HAVE_XMMINTRIN_H
-#define LIBMESH_HAVE_XMMINTRIN_H 1
+//#define LIBMESH_HAVE_XMMINTRIN_H 1
 #endif
 
 /* Flag indicating xz is available for handling compressed .xz files */
 #ifndef LIBMESH_HAVE_XZ
-#define LIBMESH_HAVE_XZ 1
+//#define LIBMESH_HAVE_XZ 1
 #endif
 
 /* Define to 1 if you have the <zlib.h> header file. */
 #ifndef LIBMESH_HAVE_ZLIB_H
-#define LIBMESH_HAVE_ZLIB_H 1
+//#define LIBMESH_HAVE_ZLIB_H 1
 #endif
 
 /* header file for the final detected hash type */
