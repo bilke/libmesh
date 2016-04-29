@@ -830,9 +830,9 @@ Real Hex27::volume () const
   const Real q[N][N] =
     {
       //^0   ^1                 ^2
-      {  1., -std::sqrt(15)/5., 15./25},
+      {  1., -std::sqrt(15.)/5., 15./25},
       {  1., 0.,                0.},
-      {  1., std::sqrt(15)/5.,  15./25}
+      {  1., std::sqrt(15.)/5.,  15./25}
     };
 
   Real vol = 0.;
