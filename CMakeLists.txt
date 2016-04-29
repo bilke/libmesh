@@ -20,5 +20,7 @@ if(USE_METIS)
 	add_definitions(-DLIBMESH_HAVE_METIS)
 endif()
 
-add_subdirectory(examples/adaptivity/adaptivity_ex1)
 add_subdirectory(examples/introduction/introduction_ex1)
+add_subdirectory(examples/adaptivity/adaptivity_ex1)
+add_subdirectory(examples/adaptivity/adaptivity_ex2)
+add_subdirectory(examples/fem_system/fem_system_ex2)

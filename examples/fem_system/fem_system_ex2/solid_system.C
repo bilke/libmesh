@@ -20,6 +20,8 @@
 // \author Robert Weidlich
 // \date Copyright 2012
 
+#include <limits>
+
 #include "libmesh/boundary_info.h"
 #include "libmesh/diff_solver.h"
 #include "libmesh/dof_map.h"
@@ -314,7 +316,7 @@ bool SolidSystem::side_time_derivative(bool request_jacobian,
       // Read values from configuration file
       Point diff_value;
       for (unsigned int d = 0; d < c.get_dim(); ++d)
-        diff_value(d) = args("bc/displacement", NAN, nbc * 4 + 1 + d);
+		  diff_value(d) = args("bc/displacement", std::numeric_limits<char>::quiet_NaN(), nbc * 4 + 1 + d);
 
       // Scale according to current load step
       diff_value *= ratio;

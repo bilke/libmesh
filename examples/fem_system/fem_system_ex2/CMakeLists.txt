@@ -1,0 +1,2 @@
+add_executable(fem_system_ex2 fem_system_ex2.C nonlinear_neohooke_cc.C solid_system.C)
+target_link_libraries(fem_system_ex2 libmesh)
