@@ -4,6 +4,7 @@ project(libmesh)
 include_directories(
 	${CMAKE_SOURCE_DIR}/include
 	${CMAKE_SOURCE_DIR}/contrib/eigen/eigen
+	${CMAKE_SOURCE_DIR}/contrib/eigen/3.2.5
 	${CMAKE_SOURCE_DIR}/contrib/metis/GKlib
 	${CMAKE_SOURCE_DIR}/contrib/metis/include
 )
