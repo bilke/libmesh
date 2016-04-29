@@ -1962,9 +1962,11 @@ void RBConstruction::write_riesz_representors_to_files(const std::string & riesz
   struct stat stat_info;
 
   // Residual representors written out to their own separate directory
+#if 0
   if ( this->processor_id() == 0)
     if ( mkdir(riesz_representors_dir.c_str(), 0755) != 0)
       libMesh::out << "Skipping creating residual_representors directory: " << strerror(errno) << std::endl;
+#endif
 
   for (unsigned int i=0; i<Fq_representor.size(); ++i)
     {
