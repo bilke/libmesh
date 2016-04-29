@@ -95,7 +95,7 @@ bool libmesh_initialized_slepc = false;
 #endif
 
 
-
+#if 0
 /**
  * Floating point exception handler -- courtesy of Cody Permann & MOOSE team
  */
@@ -141,6 +141,7 @@ void libmesh_handleSEGV(int /*signo*/, siginfo_t * info, void * /*context*/)
                     << "  run ...\n"                                    \
                     << "  bt");
 }
+#endif
 }
 
 
@@ -748,6 +749,7 @@ LibMeshInit::~LibMeshInit()
  */
 void enableFPE(bool on)
 {
+#if 0
 #if !defined(LIBMESH_HAVE_FEENABLEEXCEPT) && defined(LIBMESH_HAVE_XMMINTRIN_H) && !defined(__SUNPRO_CC)
   static int flags = 0;
 #endif
@@ -786,6 +788,7 @@ void enableFPE(bool on)
 #endif
       signal(SIGFPE, SIG_DFL);
     }
+#endif
 }
 
 
@@ -793,6 +796,7 @@ void enableFPE(bool on)
 // (potentially instead of PETSc)
 void enableSEGV(bool on)
 {
+#if 0
   static struct sigaction old_action;
   static bool was_on = false;
 
@@ -813,6 +817,7 @@ void enableSEGV(bool on)
       was_on = false;
       sigaction (SIGSEGV, &old_action, libmesh_nullptr);
     }
+#endif
 }
 
 
