@@ -20,10 +20,12 @@
 #include "libmesh/libmesh_config.h"
 
 // System includes
+#if 0
 #include <sys/time.h>
 #include <pwd.h>
 #include <unistd.h>
 #include <sys/utsname.h>
+#endif
 #include <sstream>
 
 // Local includes
@@ -49,8 +51,8 @@ std::string Utility::system_info()
   std::string date = Utility::get_timestamp();
 
   // Get system information
-  struct utsname sysInfo;
-  uname(&sysInfo);
+  //struct utsname sysInfo;
+  //uname(&sysInfo);
 
   // Get user information
 #ifdef LIBMESH_HAVE_GETPWUID
@@ -61,11 +63,13 @@ std::string Utility::system_info()
   oss << '\n'
       << " ---------------------------------------------------------------------\n"
       << "| Time:           " << date             << '\n'
+#if 0
       << "| OS:             " << sysInfo.sysname  << '\n'
       << "| HostName:       " << sysInfo.nodename << '\n'
       << "| OS Release      " << sysInfo.release  << '\n'
       << "| OS Version:     " << sysInfo.version  << '\n'
       << "| Machine:        " << sysInfo.machine  << '\n'
+#endif
 #ifdef LIBMESH_HAVE_GETPWUID
       << "| Username:       " << p->pw_name       << '\n'
 #else

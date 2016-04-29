@@ -30,7 +30,7 @@
 #include <stack>
 #include <string>
 #include <vector>
-#include <sys/time.h>
+//#include <sys/time.h>
 
 namespace libMesh
 {
@@ -52,8 +52,8 @@ public:
   PerfData () :
     tot_time(0.),
     tot_time_incl_sub(0.),
-    tstart(),
-    tstart_incl_sub(),
+    //tstart(),
+    //tstart_incl_sub(),
     count(0),
     open(false),
     called_recursively(0)
@@ -74,13 +74,13 @@ public:
    * Structure defining when the event
    * was last started.
    */
-  struct timeval tstart;
+  //struct timeval tstart;
 
   /**
    * Structure defining when the event
    * was last started, including sub-events.
    */
-  struct timeval tstart_incl_sub;
+  //struct timeval tstart_incl_sub;
 
   /**
    * The number of times this event has
@@ -268,7 +268,7 @@ private:
   /**
    * The time we were constructed or last cleared.
    */
-  struct timeval tstart;
+  //struct timeval tstart;
 
   /**
    * The actual log.
@@ -306,8 +306,8 @@ void PerfData::start ()
 {
   this->count++;
   this->called_recursively++;
-  gettimeofday (&(this->tstart), libmesh_nullptr);
-  this->tstart_incl_sub = this->tstart;
+  //gettimeofday (&(this->tstart), libmesh_nullptr);
+  //this->tstart_incl_sub = this->tstart;
 }
 
 
@@ -315,7 +315,7 @@ void PerfData::start ()
 inline
 void PerfData::restart ()
 {
-  gettimeofday (&(this->tstart), libmesh_nullptr);
+  //gettimeofday (&(this->tstart), libmesh_nullptr);
 }
 
 
@@ -330,6 +330,8 @@ double PerfData::pause ()
 inline
 double PerfData::stop_or_pause(const bool do_stop)
 {
+	return 0;
+#if 0
   // save the start times, reuse the structure we have rather than create
   // a new one.
   const time_t
@@ -345,13 +347,14 @@ double PerfData::stop_or_pause(const bool do_stop)
 
   if(do_stop)
     {
-      const double elapsed_time_incl_sub = (static_cast<double>(this->tstart.tv_sec  - this->tstart_incl_sub.tv_sec) +
-                                            static_cast<double>(this->tstart.tv_usec - this->tstart_incl_sub.tv_usec)*1.e-6);
+      const double elapsed_time_incl_sub = 0;//(static_cast<double>(this->tstart.tv_sec  - this->tstart_incl_sub.tv_sec) +
+                                            //static_cast<double>(this->tstart.tv_usec - this->tstart_incl_sub.tv_usec)*1.e-6);
 
       this->tot_time_incl_sub += elapsed_time_incl_sub;
     }
 
   return elapsed_time;
+#endif
 }
 
 
@@ -449,12 +452,12 @@ void PerfLog::pop(const char * label,
 inline
 double PerfLog::get_elapsed_time () const
 {
-  struct timeval tnow;
+  //struct timeval tnow;
 
-  gettimeofday (&tnow, libmesh_nullptr);
+  //gettimeofday (&tnow, libmesh_nullptr);
 
-  const double elapsed_time = (static_cast<double>(tnow.tv_sec  - tstart.tv_sec) +
-                               static_cast<double>(tnow.tv_usec - tstart.tv_usec)*1.e-6);
+  const double elapsed_time = 0; //(static_cast<double>(tnow.tv_sec  - tstart.tv_sec) +
+                               //static_cast<double>(tnow.tv_usec - tstart.tv_usec)*1.e-6);
   return elapsed_time;
 }
 

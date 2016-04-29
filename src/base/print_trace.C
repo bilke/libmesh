@@ -29,13 +29,15 @@
 #include "libmesh/print_trace.h"
 #include "libmesh/libmesh.h"
 
+#if 0
 #include <unistd.h>  // needed for getpid()
+#endif
 #include <fstream>
 #include <sstream>
 #include <string>
 #include <cstdio> // std::remove
 #include <cstdlib> // std::system
-#include <sys/types.h> // pid_t
+//#include <sys/types.h> // pid_t
 
 #if defined(LIBMESH_HAVE_GLIBC_BACKTRACE)
 #include <execinfo.h>

@@ -23,7 +23,7 @@
 #include <sstream>
 #include <fstream>
 
-#include <unistd.h> // for getpid()
+//#include <unistd.h> // for getpid()
 
 // Local includes
 #include "libmesh/xdr_cxx.h"
@@ -56,7 +56,7 @@ void bzip_file (const std::string & unzipped_name)
 std::string unzip_file (const std::string & name)
 {
   std::ostringstream pid_suffix;
-  pid_suffix << '_' << getpid();
+  //pid_suffix << '_' << getpid();
 
   std::string new_name = name;
   if (name.size() - name.rfind(".bz2") == 4)
@@ -113,7 +113,7 @@ void xzip_file (const std::string & unzipped_name)
 void remove_unzipped_file (const std::string & name)
 {
   std::ostringstream pid_suffix;
-  pid_suffix << '_' << getpid();
+  //pid_suffix << '_' << getpid();
 
   // If we temporarily decompressed a file, remove the
   // uncompressed version
