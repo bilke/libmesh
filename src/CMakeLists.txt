@@ -1,3 +1,7 @@
+if(USE_METIS)
+	add_definitions(-DLIBMESH_HAVE_METIS)
+endif()
+
 SET(SOURCES
 	mesh/abaqus_io.C
 	mesh/boundary_info.C
