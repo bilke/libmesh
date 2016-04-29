@@ -30,9 +30,9 @@ namespace libMesh
 
 // ------------------------------------------------------------
 // DofObject class static member -now initialized in header
-const dof_id_type       DofObject::invalid_id;
-const unique_id_type    DofObject::invalid_unique_id;
-const processor_id_type DofObject::invalid_processor_id;
+const dof_id_type       DofObject::invalid_id= static_cast<dof_id_type>(-1);;
+const unique_id_type    DofObject::invalid_unique_id= static_cast<dof_id_type>(-1);;
+const processor_id_type DofObject::invalid_processor_id= static_cast<dof_id_type>(-1);;
 
 
 

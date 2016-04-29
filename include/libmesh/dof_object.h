@@ -332,18 +332,18 @@ public:
   /**
    * An invaild \p id to distinguish an uninitialized \p DofObject
    */
-  static const dof_id_type invalid_id = static_cast<dof_id_type>(-1);
+  static const dof_id_type invalid_id; // = static_cast<dof_id_type>(-1);
 
   /**
    * An invaild \p unique_id to distinguish an uninitialized \p DofObject
    */
-  static const unique_id_type invalid_unique_id = static_cast<unique_id_type>(-1);
+  static const unique_id_type invalid_unique_id; // = static_cast<unique_id_type>(-1);
 
   /**
    * An invalid \p processor_id to distinguish DoFs that have
    * not been assigned to a processor.
    */
-  static const processor_id_type invalid_processor_id = static_cast<processor_id_type>(-1);
+  static const processor_id_type invalid_processor_id;// = static_cast<processor_id_type>(-1);
 
   /**
    * If we pack our indices into an buffer for communications, how
