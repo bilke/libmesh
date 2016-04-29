@@ -132,9 +132,9 @@ void PostscriptIO::write (const std::string & fname)
         // lower left corner
            << "0 0 "
         // upper right corner
-           << static_cast<unsigned int>( rint((x_max-x_min) * _scale ))
+           << 0 //static_cast<unsigned int>( rint((x_max-x_min) * _scale ))
            << ' '
-           << static_cast<unsigned int>( rint((y_max-y_min) * _scale ))
+           << 0 //static_cast<unsigned int>( rint((y_max-y_min) * _scale ))
            << '\n';
 
       // define some abbreviations to keep

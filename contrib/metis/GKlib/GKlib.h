@@ -45,6 +45,7 @@
 #if defined(__WITHPCRE__)
   #include <pcreposix.h>
 #else
+#define USE_GKREGEX
   #if defined(USE_GKREGEX)
     #include "gkregex.h"
   #else

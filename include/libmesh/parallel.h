@@ -1190,7 +1190,7 @@ public:
    * do so in a separate file so that users don't have to look at
    * the redundancy.
    */
-#include "libmesh/parallel_communicator_specializations"
+#include "parallel/parallel_communicator_specializations"
 
 }; // class Communicator
 

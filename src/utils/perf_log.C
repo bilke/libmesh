@@ -21,10 +21,10 @@
 #include <iostream>
 #include <iomanip>
 #include <ctime>
-#include <unistd.h>
-#include <sys/utsname.h>
-#include <sys/types.h>
-#include <pwd.h>
+//#include <unistd.h>
+//#include <sys/utsname.h>
+//#include <sys/types.h>
+//#include <pwd.h>
 #include <vector>
 #include <sstream>
 
@@ -48,7 +48,7 @@ PerfLog::PerfLog(const std::string & ln,
   log_events(le),
   total_time(0.)
 {
-  gettimeofday (&tstart, libmesh_nullptr);
+ // gettimeofday (&tstart, libmesh_nullptr);
 
   if (log_events)
     this->clear();
@@ -78,7 +78,7 @@ void PerfLog::clear()
                             << pos->first.second                      \
                             << " is still being monitored!");
 
-      gettimeofday (&tstart, libmesh_nullptr);
+      //gettimeofday (&tstart, libmesh_nullptr);
 
       log.clear();
 
@@ -97,8 +97,8 @@ std::string PerfLog::get_info_header() const
       std::string date = Utility::get_timestamp();
 
       // Get system information
-      struct utsname sysInfo;
-      uname(&sysInfo);
+     // struct utsname sysInfo;
+      //uname(&sysInfo);
 
       // Get user information
       //
@@ -148,11 +148,13 @@ std::string PerfLog::get_info_header() const
         }
 
       time_stream    << "| Time:           " << date                   ;
+#if 0
       os_stream      << "| OS:             " << sysInfo.sysname        ;
       host_stream    << "| HostName:       " << sysInfo.nodename       ;
       osrel_stream   << "| OS Release:     " << sysInfo.release        ;
       osver_stream   << "| OS Version:     " << sysInfo.version        ;
       machine_stream << "| Machine:        " << sysInfo.machine        ;
+#endif
       user_stream    << "| Username:       ";
 #ifdef LIBMESH_HAVE_GETPWUID
       if (p && p->pw_name)
@@ -245,13 +247,15 @@ std::string PerfLog::get_perf_info() const
   if (log_events && !log.empty())
     {
       // Stop timing for this event.
+#if 0
       struct timeval tstop;
 
       gettimeofday (&tstop, libmesh_nullptr);
 
       const double elapsed_time = (static_cast<double>(tstop.tv_sec  - tstart.tv_sec) +
                                    static_cast<double>(tstop.tv_usec - tstart.tv_usec)*1.e-6);
-
+#endif
+      const double elapsed_time = 0;
       // Figure out the formatting required based on the event names
       // Unsigned ints for each of the column widths
       unsigned int event_col_width            = 30;

@@ -737,9 +737,9 @@ Real Prism18::volume () const
   const Real zeta[N1D][3] =
     {
       //^0   ^1                 ^2
-      {  1., -std::sqrt(15)/5., 15./25},
+      {  1., -std::sqrt(15.)/5., 15./25},
       {  1., 0.,                0.},
-      {  1., std::sqrt(15)/5.,  15./25}
+      {  1., std::sqrt(15.)/5.,  15./25}
     };
 
   // The integer exponents for each term.

@@ -42,7 +42,7 @@
 #include "libmesh/libmesh.h"
 #include "libmesh/serial_mesh.h"
 #include "libmesh/mesh_refinement.h"
-#include "libmesh/gmv_io.h"
+//#include "libmesh/gmv_io.h"
 #include "libmesh/equation_systems.h"
 #include "libmesh/fe.h"
 #include "libmesh/quadrature_gauss.h"
@@ -269,12 +269,14 @@ int main (int argc, char ** argv)
   equation_systems.parameters.set<unsigned int>("linear solver maximum iterations") = 250;
   equation_systems.parameters.set<Real>("linear solver tolerance") = TOLERANCE;
 
+#if 0
   if (!read_solution)
     // Write out the initial condition
     GMVIO(mesh).write_equation_systems ("out.gmv.000", equation_systems);
   else
     // Write out the solution that was read in
     GMVIO(mesh).write_equation_systems ("solution_read_in.gmv", equation_systems);
+#endif
 
   // The Convection-Diffusion system requires that we specify
   // the flow velocity.  We will specify it as a RealVectorValue
@@ -420,8 +422,8 @@ int main (int argc, char ** argv)
                     << std::right
                     << t_step+1;
 
-          GMVIO(mesh).write_equation_systems (file_name.str(),
-                                              equation_systems);
+          //GMVIO(mesh).write_equation_systems (file_name.str(),
+          //                                    equation_systems);
         }
     }
 
@@ -434,8 +436,8 @@ int main (int argc, char ** argv)
 
       mesh.write("saved_mesh.xda");
       equation_systems.write("saved_solution.xda", WRITE);
-      GMVIO(mesh).write_equation_systems ("saved_solution.gmv",
-                                          equation_systems);
+      //GMVIO(mesh).write_equation_systems ("saved_solution.gmv",
+      //                                    equation_systems);
     }
 #endif // #ifndef LIBMESH_ENABLE_AMR
 

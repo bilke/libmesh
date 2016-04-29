@@ -384,7 +384,7 @@ Real Quad9::volume () const
 
   // 3x3 quadrature, exact for bi-quintics
   const unsigned int N = 3;
-  const Real q[N] = {-std::sqrt(15)/5., 0., std::sqrt(15)/5.};
+  const Real q[N] = {-std::sqrt(15.)/5., 0., std::sqrt(15.)/5.};
   const Real w[N] = {5./9, 8./9, 5./9};
 
   Real vol=0.;

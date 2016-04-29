@@ -215,7 +215,7 @@ public:
           // Vertex node?
           if (std::abs(fractional_part) < TOLERANCE || std::abs(fractional_part - 1.0) < TOLERANCE)
             {
-              int index = round(float_index);
+              int index = 0; //round(float_index);
 
               // Move node to the Gauss-Lobatto position.
               output(dir) = _mins[dir] + _widths[dir] * 0.5 * (1.0 - _cosines[dir][index]);

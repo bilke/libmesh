@@ -11,3 +11,7 @@ if(USE_METIS)
 endif()
 
 add_library(partitioning ${SOURCES})
+
+if(USE_METIS)
+	target_link_libraries(partitioning metis)
+endif()

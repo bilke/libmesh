@@ -449,8 +449,10 @@ void RBEvaluation::legacy_write_offline_data_to_files(const std::string & direct
   if(this->processor_id() == 0)
     {
 
-      // Make a directory to store all the data files
+#if 0
+	// Make a directory to store all the data files
       mkdir(directory_name.c_str(), 0777);
+#endif
       //    if( mkdir(directory_name.c_str(), 0777) == -1)
       //    {
       //      libMesh::out << "In RBEvaluation::write_offline_data_to_files, directory "
@@ -939,7 +941,7 @@ void RBEvaluation::write_out_vectors(System & sys,
   if(this->processor_id() == 0)
     {
       // Make a directory to store all the data files
-      mkdir(directory_name.c_str(), 0777);
+      //mkdir(directory_name.c_str(), 0777);
     }
 
   // Make sure processors are synced up before we begin

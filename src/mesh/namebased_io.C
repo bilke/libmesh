@@ -21,8 +21,8 @@
 #include <fstream>
 #include <vector>
 
-#include <sys/types.h> // getpid
-#include <unistd.h>
+//#include <sys/types.h> // getpid
+//#include <unistd.h>
 
 // Local includes
 #include "libmesh/libmesh_logging.h"
@@ -174,7 +174,7 @@ void NameBasedIO::read (const std::string & name)
       if (mymesh.processor_id() == 0)
         {
           std::ostringstream pid_suffix;
-          pid_suffix << '_' << getpid();
+          //pid_suffix << '_' << getpid();
           // Nasty hack for reading/writing zipped files
           std::string new_name = name;
           if (name.size() - name.rfind(".bz2") == 4)
@@ -316,12 +316,14 @@ void NameBasedIO::write (const std::string & name)
     {
       // Nasty hack for reading/writing zipped files
       std::string new_name = name;
+#if 0
       pid_t pid_0 = 0;
       if (mymesh.processor_id() == 0)
         pid_0 = getpid();
       mymesh.comm().broadcast(pid_0);
+#endif
       std::ostringstream pid_suffix;
-      pid_suffix << '_' << pid_0;
+      //pid_suffix << '_' << pid_0;
 
       if (name.size() - name.rfind(".bz2") == 4)
         {
